@@ -14,9 +14,11 @@
             "email": "mauro@mogiana.co"
         }
     ],
-    "type": "project",
     "require": {
-        "php": ">=7.2"
+        "php": "^7.3|^8.0|^8.1"
+    },
+    "require-dev": {
+        "laravel/framework": "^8|^9"
     },
     "autoload": {
         "psr-4": {
