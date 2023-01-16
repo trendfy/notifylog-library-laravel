@@ -1,0 +1,39 @@
+{
+    "name": "notifylog/laravel",
+    "description": "Real-time event notification",
+    "keywords": [
+        "monitoring",
+        "php",
+        "notifylog",
+        "laravel"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mauro Marchiori",
+            "email": "mauro@mogiana.co"
+        }
+    ],
+    "type": "project",
+    "require": {
+        "php": ">=7.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "NotifyLog\\Laravel\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NotifyLog\\Laravel\\NotifyLogServiceProvider"
+            ]
+        }
+    }
+}
