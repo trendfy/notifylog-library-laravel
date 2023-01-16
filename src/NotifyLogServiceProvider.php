@@ -6,6 +6,7 @@ use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Foundation\Application as LaravelApplication;
 use NotifyLog\Laravel\Configuration;
+use NotifyLog\Laravel\Tests\TestCommand;
 
 class NotifyLogServiceProvider extends ServiceProvider implements DeferrableProvider
 {
@@ -45,6 +46,12 @@ class NotifyLogServiceProvider extends ServiceProvider implements DeferrableProv
     public function boot()
     {
         $this->setupConfigFile();
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                TestCommand::class,
+            ]);
+        }
     }
 
     /**
