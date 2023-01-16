@@ -20,9 +20,17 @@ NOTIFYLOG_ACCOUNT_TOKEN=[account_token]
 
 You can find your Account Token [here](https://app.notifylog.com/dashboard/settings/api)
 
+### Test your Configuration
+
+run
+
+```bash
+php artisan notifylog:test
+```
+
 ### Usage
 
-Then, you can use the `publish` method to send a notification from within your controllers
+Then, you can use NotifyLog `publish` method to send a notification from within your controller
 
 ```php
 <?php
@@ -54,10 +62,15 @@ class Controller extends BaseController
                 "[Link](https://google.com)",
         ];
 
+       // Use:
+       $notifyLog->publish($event);
+
+       // or, you can also use the helper
+       // without the need to inject
+       // NotifyLog into the controller
+       // by calling
 
        notifylog()->publish($event);
-
-       $notifyLog->publish($event);
 
 ```
 
