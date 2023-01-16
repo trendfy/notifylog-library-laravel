@@ -22,7 +22,7 @@ class Configuration
     /**
      * @var string
      */
-    protected $version = '0.0.1';
+    protected $version = '1.0.0';
 
     /**
      * @var string

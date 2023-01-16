@@ -48,7 +48,7 @@ class TestCommand extends Command
             ? $this->info('✅ CURL extension is enabled.')
             : $this->warn('❌ CURL is disabled so your app could not be able to send data to NotifyLog.');
 
-        $this->line('Sending test event data to NotifLog');
+        $this->line('Sending test event data to NotifyLog');
 
         $event = [
             "name" =>  "NotifyLog Laravel Library",
